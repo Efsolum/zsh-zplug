@@ -19,7 +19,7 @@ source $package_dir/zfunctions/index.zsh
 		 print "Zplug package directory: $package_dir"}
 
 # update symlinks to relative paths
-# if [[ -d $ZDOTDIR/zplug/bin/ ]]; then
-# 		symlinks -dc $ZDOTDIR/{zplug/bin/,zplug} | \
-# 				sed 's\^\symlinks: \' &>> $ZCONFIG_LOG
-# fi
+if [[ -d $ZDOTDIR/zplug/bin/ && -x $(type symlinks) ]]; then
+		symlinks -dc $ZDOTDIR/{zplug/bin/,zplug} | \
+				sed 's\^\symlinks: \' &>> $ZCONFIG_LOG
+fi
