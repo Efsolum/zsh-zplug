@@ -1,0 +1,3 @@
+
+print "Removing the $ZPLUG_HOME directory"
+rm -rf $ZPLUG_HOME
