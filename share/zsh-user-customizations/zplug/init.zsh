@@ -4,6 +4,8 @@ package_dir=$(dirname $_)
 export ZPLUG_HOME=$package_dir/zplug
 export USER_PACKAGE_VERBOSE=${USER_PACKAGE_VERBOSE:-false}
 export USER_THEMES_ENABLED=${USER_THEMES_ENABLED:-false}
+
+# Disable ohmyzsh auto update feature.
 export DISABLE_AUTO_UPDATE="true"
 
 if [[ ! -d $ZPLUG_HOME ]]; then
