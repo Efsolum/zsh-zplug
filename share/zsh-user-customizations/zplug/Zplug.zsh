@@ -1,5 +1,5 @@
 
-zplug "b4b4r07/zplug" # ZSH & CLI Package Manager
+zplug "zplug/zplug" # ZSH & CLI Package Manager
 
 zplug "plugins/battery", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
@@ -18,10 +18,9 @@ zplug "supercrabtree/k"
 zplug "zsh-users/zsh-syntax-highlighting"
 
 # Install missing plugins
-if ! zplug check; then
-    zplug install
+if ! zplug check --verbose; then
+    echo; zplug install
 fi
 
 # source plugins and add commands to $PATH
-zplug clear --force > /dev/null
 zplug load
