@@ -4,6 +4,7 @@ package_dir=$(dirname $_)
 export ZPLUG_HOME=$package_dir/zplug
 export USER_PACKAGE_VERBOSE=${USER_PACKAGE_VERBOSE:-false}
 export USER_THEMES_ENABLED=${USER_THEMES_ENABLED:-false}
+export DISABLE_AUTO_UPDATE="true"
 
 [[ -d $ZPLUG_HOME ]] || \
 		{print 'Installing Zplug'
@@ -23,4 +24,4 @@ source $package_dir/zfunctions/index.zsh
 if [[ -d $ZDOTDIR/zplug/bin/ && -x $(type symlinks) ]]; then
 		symlinks -dc $ZDOTDIR/{zplug/bin/,zplug} | \
 				sed 's\^\symlinks: \' &>> $ZCONFIG_LOG
- fi
+fi
