@@ -1,6 +1,6 @@
 # Only Zsh theme functionality goes here
 
-zplug "caiogondim/bullet-train-oh-my-zsh-theme", of:bullet-train.zsh-theme
+zplug "caiogondim/bullet-train-oh-my-zsh-theme", use:bullet-train.zsh-theme
 # export ZSH_THEME='bullet-train'
 export BULLETTRAIN_CONTEXT_SHOW=true
 export BULLETTRAIN_EXEC_TIME_SHOW=true
