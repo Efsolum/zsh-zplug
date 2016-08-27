@@ -3,6 +3,7 @@ package_dir=$(dirname $_)
 # zplug directory, for storing zsh dpendencies
 export ZPLUG_HOME=$package_dir/zplug
 export USER_PACKAGE_VERBOSE=${USER_PACKAGE_VERBOSE:-false}
+export USER_THEMES_ENABLED=${USER_THEMES_ENABLED:-false}
 
 [[ -d $ZPLUG_HOME ]] || \
 		{print 'Installing Zplug'
@@ -10,7 +11,7 @@ export USER_PACKAGE_VERBOSE=${USER_PACKAGE_VERBOSE:-false}
 		 zplug update --self}
 
 source $ZPLUG_HOME/zplug
-source $package_dir/themes.zsh
+[[ $USER_THEMES_ENABLED == true ]] && source $package_dir/themes.zsh
 source $package_dir/Zplug.zsh
 source $package_dir/zfunctions/index.zsh
 
